@@ -62,6 +62,13 @@ function genChart(sprintArray, closedLineArray, idealLineArray, estimatedLineArr
                     borderColor: "rgba(0,255,0,1)",
                     backgroundColor: "rgba(0,0,0,0)",
                     spanGaps: false
+                },
+                {
+                    label: '完了済み',
+                    data: closedLineArray.slice(1),
+                    borderColor: "rgba(255,255,0,1)",
+                    backgroundColor: "rgba(0,0,0,0)",
+                    spanGaps: false
                 }
             ],
         },
