@@ -1,6 +1,6 @@
 function loadcsv(filepath) {
     var req = new XMLHttpRequest();
-    request.addEventListener('load', (event) => { 
+    req.addEventListener('load', (event) => { 
         const response = event.target.responseText; 
         console.log(response);
     });
