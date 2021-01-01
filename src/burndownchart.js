@@ -1,12 +1,11 @@
 function loadcsv(filepath) {
     var req = new XMLHttpRequest();
-    req.open("GET", filepath, false);
-    req.send(null);
-
-    req.onload = function() {
-        console.log("AAAAA")
-        console.log(req.responseText)
-    }
+    request.addEventListener('load', (event) => { 
+        const response = event.target.responseText; 
+        console.log(response);
+    });
+    req.open("GET", filepath, true);
+    req.send();
 }
 loadcsv("/GithubBurnDownChart/burndownchart.csv")
 var ctx = document.getElementById("burnDownChart");
