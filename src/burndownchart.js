@@ -10,11 +10,11 @@ function loadcsv(filepath) {
 }
 
 function csv2array(csvStr) {
-    const sprintArray = [];
-    const closedLineArray = [];
-    const idealLineArray = [];
-    const estimatedLineArray = [];
-    const actualLineArray = [];
+    var sprintArray = [];
+    var closedLineArray = [];
+    var idealLineArray = [];
+    var estimatedLineArray = [];
+    var actualLineArray = [];
 
     csvStr = csvStr.replace(/\s+/g, "");
     var csvRow = csvStr.split('\n'); 
