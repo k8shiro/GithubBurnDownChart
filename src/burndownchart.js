@@ -30,7 +30,7 @@ var burnDownChart = new Chart(ctx, {
             },
             {
                 label: '実績線',
-                data: [10, 10, 10, 10, 10, 10, 10, 10],
+                data: [20, 10, 10, 10, 10, 10, 10, 10],
                 borderColor: "rgba(0,255,0,1)",
                 backgroundColor: "rgba(0,0,0,0)",
                 spanGaps: true
