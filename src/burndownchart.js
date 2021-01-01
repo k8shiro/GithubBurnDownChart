@@ -20,11 +20,11 @@ function csv2array(csvStr) {
     console.log(csvRow);
     for (let i = 0; i < csvRow.length; i++) { 
         var rowArray = csvRow[i].replace(/\s+/g, "").split(',');
-        sprintArray[i] = rowArray[0].replace("", null);
-        closedLineArray[i] = rowArray[1].replace("", null);
-        actualLineArray[i] = rowArray[2].replace("", null);
-        estimatedLineArray[i] = rowArray[3].replace("", null);
-        idealLineArray[i] = rowArray[4].replace("", null);
+        sprintArray[i]        = rowArray[0] === "" ?  null : rowArray[0];
+        closedLineArray[i]    = rowArray[1] === "" ?  null : rowArray[1];
+        actualLineArray[i]    = rowArray[2] === "" ?  null : rowArray[2];
+        estimatedLineArray[i] = rowArray[3] === "" ?  null : rowArray[3];
+        idealLineArray[i]     = rowArray[4] === "" ?  null : rowArray[4];
         
     }
     console.log(sprintArray);
