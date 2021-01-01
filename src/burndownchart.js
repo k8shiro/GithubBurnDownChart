@@ -27,6 +27,7 @@ function csv2array(csvStr) {
         actualLineArray[i] = rowArray[4];
     }
     console.log(sprintArray);
+    console.log(sprintArray[1]);
     console.log(closedLineArray);
     console.log(idealLineArray);
     console.log(estimatedLineArray);
