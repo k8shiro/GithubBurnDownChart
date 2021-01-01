@@ -16,11 +16,10 @@ function csv2array(csvStr) {
     var estimatedLineArray = [];
     var actualLineArray = [];
 
-    csvStr = csvStr.replace(/\s+/g, "");
-    var csvRow = csvStr.split('\n'); 
+    var csvRow = csvStr.split("\n"); 
     console.log(csvRow);
     for (let i = 0; i < csvRow.length; i++) { 
-        var rowArray = csvRow[i].split(',');
+        var rowArray = csvRow[i].replace(/\s+/g, "").split(',');
         sprintArray[i] = rowArray[0];
         closedLineArray[i] = rowArray[1];
         idealLineArray[i] = rowArray[2];
