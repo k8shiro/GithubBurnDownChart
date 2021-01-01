@@ -18,6 +18,7 @@ function csv2array(csvStr) {
 
     csvStr = csvStr.replace(/\s+/g, "");
     var csvRow = csvStr.split('\n'); 
+    console.log(csvRow);
     for (let i = 0; i < csvRow.length; i++) { 
         var rowArray = csvRow[i].split(',');
         sprintArray[i] = rowArray[0];
