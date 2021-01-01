@@ -11,6 +11,18 @@
     <canvas id="burnDownChart"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     <script type="text/javascript" src="src/burndownchart.js"></script>
+
+    <table>
+        {% for row in site.data.burndownchart %}
+        {% if forloop.first %}
+        <tr>
+            {% for pair in row %}
+            <th>{{ pair[0] }}</th>
+            {% endfor %}
+        </tr>
+        {% endif %} {% endfor %}
+    </table>
+
 </body>
 
 </html>
