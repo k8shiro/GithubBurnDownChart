@@ -1,0 +1,60 @@
+{
+    "data": [
+        {
+            "sprint": "0回目",
+            "closedLine": 0,
+            "idealLine": 200,
+            "estimatedLine": 200,
+            "actualLine": 200
+        },
+        {
+            "sprint": "1回目",
+            "closedLine": 18,
+            "idealLine": null,
+            "estimatedLine": null,
+            "actualLine": 182
+        },
+        {
+            "sprint": "2回目",
+            "closedLine": 38,
+            "idealLine": null,
+            "estimatedLine": null,
+            "actualLine": 162
+        },
+        {
+            "sprint": "3回目(アイテム10p追加)",
+            "closedLine": 58,
+            "idealLine": null,
+            "estimatedLine": null,
+            "actualLine": 152
+        },
+        {
+            "sprint": "4回目",
+            "closedLine": 80,
+            "idealLine": null,
+            "estimatedLine": null,
+            "actualLine": 130
+        },
+        {
+            "sprint": "5回目",
+            "closedLine": null,
+            "idealLine": null,
+            "estimatedLine": null,
+            "actualLine": null
+        },
+        {
+            "sprint": "6回目",
+            "closedLine": null,
+            "idealLine": null,
+            "estimatedLine": null,
+            "actualLine": null
+        },
+        {
+            "sprint": "7回目(リリース)",
+            "closedLine": null,
+            "idealLine": 0,
+            "estimatedLine": 60,
+            "actualLine": null
+        }
+    ]
+}
