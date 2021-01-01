@@ -9,7 +9,7 @@
 //     }
 // }
 // loadcsv("/GithubBurnDownChart/burndownchart.csv")
-console.log(site.data.brundownchart)
+//console.log(site.data.brundownchart)
 var ctx = document.getElementById("burnDownChart");
 var burnDownChart = new Chart(ctx, {
     type: 'line',
