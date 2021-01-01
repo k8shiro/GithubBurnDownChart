@@ -22,9 +22,10 @@ function csv2array(csvStr) {
         var rowArray = csvRow[i].replace(/\s+/g, "").split(',');
         sprintArray[i] = rowArray[0];
         closedLineArray[i] = rowArray[1];
-        idealLineArray[i] = rowArray[2];
+        actualLineArray[i] = rowArray[2];
         estimatedLineArray[i] = rowArray[3];
-        actualLineArray[i] = rowArray[4];
+        idealLineArray[i] = rowArray[4];
+        
     }
     console.log(sprintArray);
     console.log(closedLineArray);
