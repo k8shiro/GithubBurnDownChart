@@ -1,12 +1,24 @@
 function loadcsv(filepath) {
     var req = new XMLHttpRequest();
     req.addEventListener('load', (event) => { 
-        const response = event.target.responseText; 
-        console.log(response);
+        const resp = event.target.responseText; 
+        console.log(resp);
+        csv2array(resp)
     });
     req.open("GET", filepath, true);
     req.send();
 }
+
+function csv2array(csvStr) {
+    const csvArray = [];
+    const csvRow = csvStr.split('\n'); 
+    for (let i = 0; i < csvRow.length; i++) { 
+        csvArray[i] = csvRow[i].split(',');
+    }
+    console.log(csvArray);
+
+}
+
 loadcsv("/GithubBurnDownChart/burndownchart.csv")
 var ctx = document.getElementById("burnDownChart");
 var burnDownChart = new Chart(ctx, {
