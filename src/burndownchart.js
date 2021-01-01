@@ -4,10 +4,11 @@ function loadcsv(filepath) {
     req.send(null);
 
     req.onload = function() {
+        console.log("AAAAA")
         console.log(req.responseText)
     }
 }
-console.log(loadcsv("/GithubBurnDownChart/burndownchart.csv"))
+loadcsv("/GithubBurnDownChart/burndownchart.csv")
 
 var ctx = document.getElementById("burnDownChart");
 var burnDownChart = new Chart(ctx, {
