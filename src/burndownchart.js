@@ -11,12 +11,12 @@ function loadcsv(filepath) {
 
 function csv2array(csvStr) {
     const csvArray = [];
-    const csvRow = csvStr.split('\n'); 
+    csvStr = csvStr.replace(/\s+/g, "");
+    var csvRow = csvStr.split('\n'); 
     for (let i = 0; i < csvRow.length; i++) { 
         csvArray[i] = csvRow[i].split(',');
     }
     console.log(csvArray);
-
 }
 
 loadcsv("/GithubBurnDownChart/burndownchart.csv")
