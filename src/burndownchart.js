@@ -10,13 +10,27 @@ function loadcsv(filepath) {
 }
 
 function csv2array(csvStr) {
-    const csvArray = [];
+    const sprintArray = [];
+    const closedLineArray = [];
+    const idealLineArray = [];
+    const estimatedLineArray = [];
+    const actualLineArray = [];
+
     csvStr = csvStr.replace(/\s+/g, "");
     var csvRow = csvStr.split('\n'); 
     for (let i = 0; i < csvRow.length; i++) { 
-        csvArray[i] = csvRow[i].split(',');
+        var rowArray = csvRow[i].split(',');
+        sprintArray[i] = rowArray[0];
+        closedLineArray[i] = rowArray[1];
+        idealLineArray[i] = rowArray[2];
+        estimatedLineArray[i] = rowArray[3];
+        actualLineArray[i] = rowArray[4];
     }
-    console.log(csvArray);
+    console.log(sprintArray);
+    console.log(closedLineArray);
+    console.log(idealLineArray);
+    console.log(estimatedLineArray);
+    console.log(actualLineArray);
 }
 
 loadcsv("/GithubBurnDownChart/burndownchart.csv")
