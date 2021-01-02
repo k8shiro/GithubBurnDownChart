@@ -10,6 +10,7 @@ function loadcsv(filepath) {
 }
 
 function csv2array(csvStr) {
+    var csvArray = [];
     var sprintArray = [];
     var closedLineArray = [];
     var idealLineArray = [];
@@ -18,8 +19,10 @@ function csv2array(csvStr) {
 
     var csvRow = csvStr.split("\n"); 
     console.log(csvRow);
+
     for (let i = 0; i < csvRow.length; i++) { 
         var rowArray = csvRow[i].replace(/\s+/g, "").split(',');
+        csvArray[i] = rowArray;
         sprintArray[i]        = rowArray[0] === "" ?  null : rowArray[0];
         closedLineArray[i]    = rowArray[1] === "" ?  null : rowArray[1];
         actualLineArray[i]    = rowArray[2] === "" ?  null : rowArray[2];
@@ -34,6 +37,21 @@ function csv2array(csvStr) {
     console.log(actualLineArray);
 
     genChart(sprintArray, closedLineArray, idealLineArray, estimatedLineArray, actualLineArray);
+    genTable(csvArray);
+}
+
+function genTable(csvArray){
+    var tableEle = document.getElementById("csvTable");
+
+    for (var i = 0; i < csvArray.length; i++) {
+        var tr = document.createElement('tr');
+        for (var j = 0; j < csvArray[i].length; j++) {
+            var td = document.createElement('td');
+            td.innerHTML = csvArray[i][j];
+            tr.appendChild(td);
+        }
+        tableEle.appendChild(tr);
+    }
 }
 
 function genChart(sprintArray, closedLineArray, idealLineArray, estimatedLineArray, actualLineArray){
